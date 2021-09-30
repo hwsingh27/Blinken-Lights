@@ -82,3 +82,10 @@ Hence, it was made common so that it could be implemented anywhere.<br/>
      776:	46c0      	nop			; (mov r8, r8)  /*does nothing (used for looping) <br/>
      778:	00000671 	.word	0x00000671 <br/>
 
+## Peer Review
+ @Date - 27th September 2021 <br/>
+ @Time - 11:10AM - 12:25PM (Class hours) <br/>
+ @Partner - Varun Mehta <br/> 
+ 
+ Suggestions - Adding comments to explain the code <br/>
+ Changes - Added the comments in Blink_LED_A3.c, led.c and touch.c file
