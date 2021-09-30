@@ -68,29 +68,29 @@ void Led_Choice(color_e col)
 	switch(col)
 	{
 	case RED:
-		GPIOB->PCOR |= (1 << RED_LED_PIN);
-		GPIOB->PSOR |= (1 << GREEN_LED_PIN);
-		GPIOD->PSOR |= (1 << BLUE_LED_PIN);
+		GPIOB->PCOR |= (1 << RED_LED_PIN); // turning on RED LED
+		GPIOB->PSOR |= (1 << GREEN_LED_PIN); // turning off GREEN LED
+		GPIOD->PSOR |= (1 << BLUE_LED_PIN); // turning off BLUE LED
 		break;
 	case GREEN:
-		GPIOB->PCOR |= (1 << GREEN_LED_PIN);
-		GPIOB->PSOR |= (1 << RED_LED_PIN);
-		GPIOD->PSOR |= (1 << BLUE_LED_PIN);
+		GPIOB->PCOR |= (1 << GREEN_LED_PIN); // turning on GREEN LED
+		GPIOB->PSOR |= (1 << RED_LED_PIN); // turning off RED LED
+		GPIOD->PSOR |= (1 << BLUE_LED_PIN); // turning off BLUE LED
 		break;
 	case BLUE:
-		GPIOD->PCOR |= (1 << BLUE_LED_PIN);
-		GPIOB->PSOR |= (1 << RED_LED_PIN);
-		GPIOB->PSOR |= (1 << GREEN_LED_PIN);
+		GPIOD->PCOR |= (1 << BLUE_LED_PIN); // turning on BLUE LED
+		GPIOB->PSOR |= (1 << RED_LED_PIN); // turning off RED LED
+		GPIOB->PSOR |= (1 << GREEN_LED_PIN); // turning off GREEN LED
 		break;
 	case WHITE:
-		GPIOB->PCOR |= (1 << RED_LED_PIN);
-		GPIOB->PCOR |= (1 << GREEN_LED_PIN);
-		GPIOD->PCOR |= (1 << BLUE_LED_PIN);
+		GPIOB->PCOR |= (1 << RED_LED_PIN); // turning on RED LED
+		GPIOB->PCOR |= (1 << GREEN_LED_PIN); // turning on GREEN LED
+		GPIOD->PCOR |= (1 << BLUE_LED_PIN); // turning on BLUE LED
 		break;
 	case OFF:
-		GPIOB->PSOR |= (1 << RED_LED_PIN);
-		GPIOB->PSOR |= (1 << GREEN_LED_PIN);
-		GPIOD->PSOR |= (1 << BLUE_LED_PIN);
+		GPIOB->PSOR |= (1 << RED_LED_PIN); // turning off RED LED
+		GPIOB->PSOR |= (1 << GREEN_LED_PIN); // turning off GREEN LED
+		GPIOD->PSOR |= (1 << BLUE_LED_PIN); // turning off BLUE LED
 		break;
 	}
 }
