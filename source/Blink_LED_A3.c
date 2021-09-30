@@ -39,22 +39,22 @@ void Touch_Change_Color_On()
 	if(touch_val>=650 && touch_val<=850)
 	{
 		LOG("SLIDER VALUE %d",touch_val);
-		color = RED;
+		color = RED; // color changes to RED
 		LOG("\nCHANGE LED TO RED\n");
 	}
 	else if(touch_val>850 && touch_val<=1300)
 	{
 		LOG("SLIDER VALUE %d",touch_val);
-		color = GREEN;
+		color = GREEN; // color changes to GREEN
 		LOG("\nCHANGE LED TO GREEN\n");
 	}
 	else if(touch_val>1300)
 	{
 		LOG("SLIDER VALUE %d",touch_val);
-		color = BLUE;
+		color = BLUE; // color changes to BLUE
 		LOG("\nCHANGE LED TO BLUE\n");
 	}
-	Led_Choice(color);
+	Led_Choice(color); //turns on the respective LED
 	delay(100);
 }
 
@@ -110,77 +110,77 @@ int main(void)
 	Touch_Init();
 	Led_Init();
 
-	Led_Choice(RED);
+	Led_Choice(RED); // turns on RED LED for 500msec
 	delay(500);
-	Led_Choice(OFF);
+	Led_Choice(OFF); // turns off RED LED for 100msec
 	delay(100);
 
-	Led_Choice(GREEN);
+	Led_Choice(GREEN); // turns on GREEN LED for 500msec
 	delay(500);
-	Led_Choice(OFF);
+	Led_Choice(OFF); // turns off GREEN LED for 100msec
 	delay(100);
 
-	Led_Choice(BLUE);
+	Led_Choice(BLUE); // turns on BLUE LED for 500msec
 	delay(500);
-	Led_Choice(OFF);
+	Led_Choice(OFF); // turns off BLUE LED for 100msec
 	delay(100);
 
-	Led_Choice(WHITE);
+	Led_Choice(WHITE); // turns on WHITE LED for 100msec
 	delay(100);
-	Led_Choice(OFF);
+	Led_Choice(OFF); // turns off WHITE LED for 100msec
 	delay(100);
 
-	Led_Choice(WHITE);
+	Led_Choice(WHITE); // turns on WHITE LED for 100msec
 	delay(100);
-	Led_Choice(OFF);
+	Led_Choice(OFF); // turns off WHITE LED for 100msec
 	delay(100);
 
 	while(1)
 	{
 		LOG("START TIMER 500\n");
-		for(int i=0; i<5; i++)
+		for(int i=0; i<5; i++) // turns on the LED for 500msec
 		{
 			Touch_Change_Color_On();
 		}
 
 		Led_Choice(OFF);
-		for(int i=0; i<5; i++)
+		for(int i=0; i<5; i++) // turns off the LED for 500msec
 		{
 			Touch_Change_Color_Off();
 		}
 
 		LOG("START TIMER 1000\n");
-		for(int i=0; i<10; i++)
+		for(int i=0; i<10; i++) // turns on the LED for 1000msec
 		{
 			Touch_Change_Color_On();
 		}
 
 		Led_Choice(OFF);
-		for(int i=0; i<5; i++)
+		for(int i=0; i<5; i++) // turns off the LED for 500msec
 		{
 			Touch_Change_Color_Off();
 		}
 
 		LOG("START TIMER 2000\n");
-		for(int i=0; i<20; i++)
+		for(int i=0; i<20; i++) // turns on the LED for 2000msec
 		{
 			Touch_Change_Color_On();
 		}
 
 		Led_Choice(OFF);
-		for(int i=0; i<5; i++)
+		for(int i=0; i<5; i++) // turns off the LED for 500msec
 		{
 			Touch_Change_Color_Off();
 		}
 
-		LOG("START TIMER 3000\n");
+		LOG("START TIMER 3000\n"); // turns on the LED for 3000msec
 		for(int i=0; i<30; i++)
 		{
 			Touch_Change_Color_On();
 		}
 
 		Led_Choice(OFF);
-		for(int i=0; i<5; i++)
+		for(int i=0; i<5; i++) // turns off the LED for 500msec
 		{
 			Touch_Change_Color_Off();
 		}
